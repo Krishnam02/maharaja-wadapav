@@ -36,6 +36,7 @@ body {
 .navbar ul {
     display: flex;
     list-style: none;
+    transition: all 0.3s ease;
 }
 
 .navbar ul li {
@@ -51,6 +52,17 @@ body {
 
 .navbar ul li a:hover {
     color: #FFD700;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navbar ul.show {
+    display: flex;
 }
 
 /* Hero Section */
@@ -101,6 +113,18 @@ body {
 .hero .btn:hover {
     background: #ffca28;
     transform: scale(1.05);
+}
+
+/* Scroll down */
+.scroll-down {
+    font-size: 2rem;
+    margin-top: 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
 }
 
 /* Section Styles */
@@ -188,6 +212,36 @@ h2 {
     box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
+/* Creators */
+.creators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.creator img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.creator img:hover {
+    transform: scale(1.05);
+}
+
+.creator h4 {
+    color: #b71c1c;
+    font-weight: 700;
+}
+
+.creator p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
 /* Why Choose Us */
 #why ul {
     list-style: none;
@@ -261,19 +315,11 @@ h2 {
     border: none;
 }
 
-.query-bar {
-    background-color: #b30000; /* Red background to match your theme */
-    color: white;
-    font-weight: bold;
-    padding: 6px 0;
-    font-size: 16px;
-}
-
 /* Sliding Contact Box */
 .slide-box {
     position: fixed;
     top: 40%;
-    right: -320px; /* hidden by default */
+    right: -320px;
     background-color: #b30000;
     color: white;
     padding: 10px 15px;
@@ -286,18 +332,16 @@ h2 {
     display: flex;
     align-items: center;
     gap: 10px;
-    opacity: 0; /* fully invisible */
-    visibility: hidden; /* remove from view */
+    opacity: 0;
+    visibility: hidden;
 }
 
-/* When visible */
 .slide-box.show {
     right: 0;
     opacity: 1;
     visibility: visible;
 }
 
-/* Close button */
 .close-btn {
     background: none;
     border: none;
@@ -310,28 +354,12 @@ h2 {
     color: #ffcccc;
 }
 
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-
-    /* Navbar: stack items vertically */
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
+/* Responsive */
+@media(max-width: 768px) {
+    .contact-container, .menu-grid, .specialities-grid, .creators-grid {
+        grid-template-columns: 1fr;
     }
 
-    .navbar ul {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
-
-    /* Hero text size */
     .hero h1 {
         font-size: 2rem;
     }
@@ -340,33 +368,21 @@ h2 {
         font-size: 1rem;
     }
 
-    /* Contact section */
-    .contact-container {
-        grid-template-columns: 1fr;
+    .navbar ul {
+        flex-direction: column;
+        background: #b71c1c;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        display: none;
     }
 
-    /* Menu grid: fewer columns */
-    .menu-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-}
-
-/* Extra small devices */
-@media (max-width: 480px) {
-    .hero {
-        height: 70vh;
-        padding: 20px;
+    .navbar ul.show {
+        display: flex;
     }
 
-    .hero h1 {
-        font-size: 1.6rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr;
+    .hamburger {
+        display: block;
     }
 }
