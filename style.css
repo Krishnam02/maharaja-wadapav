@@ -354,18 +354,29 @@ h2 {
     color: #ffcccc;
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media(max-width: 768px) {
-    .contact-container, .menu-grid, .specialities-grid, .creators-grid {
+
+    /* Grids stack vertically */
+    .contact-container,
+    .menu-grid,
+    .specialities-grid,
+    .creators-grid {
         grid-template-columns: 1fr;
     }
 
+    /* Hero text smaller */
     .hero h1 {
         font-size: 2rem;
     }
 
     .hero p {
         font-size: 1rem;
+    }
+
+    /* Navbar mobile */
+    .navbar {
+        position: relative;
     }
 
     .navbar ul {
@@ -375,14 +386,31 @@ h2 {
         top: 100%;
         right: 0;
         width: 100%;
-        display: none;
+        display: none; /* hide menu by default */
+        padding: 10px 0;
+        text-align: center;
+        z-index: 999;
     }
 
     .navbar ul.show {
-        display: flex;
+        display: flex; /* show when hamburger clicked */
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
     }
 
     .hamburger {
         display: block;
+        cursor: pointer;
+        font-size: 1.8rem;
+        color: #FFD700;
+        user-select: none;
+    }
+
+    /* Optional: make hero section taller on small screens */
+    .hero {
+        height: 70vh;
+        padding: 0 15px;
     }
 }
