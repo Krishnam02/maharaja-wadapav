@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maharaja Wada - The King of Taste</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Maharaja Wada&reg;</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#specialities">Specialities</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#why">Why Choose Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+      <!-- Sliding Contact Box -->
+<div class="slide-box" id="slideBox">
+    <span>For any queries contact Abhay Sangoi - 98440 81481</span>
+    <button class="close-btn" id="closeBox">×</button>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+
+<script>
+    // Show box when user reaches bottom
+    window.addEventListener('scroll', function () {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            document.getElementById('slideBox').classList.add('show');
+        }
+    });
+
+    // Close button
+    document.getElementById('closeBox').addEventListener('click', function () {
+        document.getElementById('slideBox').classList.remove('show');
+    });
+</script>
+
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>The King of Taste</h1>
+            <p>Serving Royal Street Food Experience</p>
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" data-aos="fade-up">
+        <h2>About Us</h2>
+        <p>From our humble beginnings in Pune, Maharaja Vada Pav has risen to become a symbol of authentic street food served with a royal touch. What started as a small counter with a simple mission — to serve the freshest, tastiest vada pav in town — has now evolved into a celebrated brand loved across multiple cities.
+
+            Every bite captures the vibrant flavours of India — from our signature, spice-infused vada pav to a variety of café-style treats that cater to every mood and moment. Whether it’s a quick snack on the go, a friendly chai break, or a casual meal with loved ones, our menu offers something for everyone.
+            
+            Built on a passion for taste, an unwavering commitment to quality, and the simple joy of sharing good food, we continue to expand while staying true to our values of freshness, hygiene, and exceptional service. Our journey is about more than just food — it’s about creating moments, memories, and the unmistakable joy that comes with every plate of street food royalty..</p>
+    </section>
+
+    <!-- Specialities -->
+    <section id="specialities" data-aos="fade-up">
+        <h2>Our Specialities</h2>
+        <div class="specialities-grid">
+            <div class="item">Wada Pav</div>
+            <div class="item">Maharashtrian Snacks</div>
+            <div class="item">Sandwiches</div>
+            <div class="item">Cold Beverages</div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" data-aos="fade-up">
+        <h2>Our Menu</h2>
+
+        <div class="menu-category">
+            <h3>Wada Pav</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="prime idea (2).JPG" alt="Classic Vada Pav">
+                    <h4>Prime Idea</h4>
+                    <p>Crisp potato patty in soft pav with signature chutneys.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="tandoori wadapav.jpg" alt="Tandoori Pav">
+                    <h4>Tandoori </h4>
+                    <p>Wada pav infused with smoky tandoori flavors and spicy chutneys.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="cheesy jalapeno.JPG" alt="Cheesy Jalapeno Pav">
+                    <h4>Cheesy Jalapeno</h4>
+                    <p>Wada pav loaded with melting cheese and spicy jalapeno kick.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>Sandwiches</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="veg cheese grilled sandwich.jpg" alt="Veg Grilled Sandwich">
+                    <h4>Veg Cheese Grilled Sandwich</h4>
+                    <p>Fresh vegetables and cheese grilled to golden perfection.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="peri peri cheese grilled sandwich.jpg" alt="Cheese Toast">
+                    <h4>Peri Peri Cheese Grilled</h4>
+                    <p>Grilled sandwich layered with cheese and tangy peri peri seasoning.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>Snacks/Beverages</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="peri peri fries.jpg" alt="Masala Chai">
+                    <h4>Peri Peri Fries</h4>
+                    <p>Crispy fries tossed in bold and zesty peri peri spices.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="Corn Chesse Nuggets.jpeg" alt="Cold Coffee">
+                    <h4>Corn Cheese Ball</h4>
+                    <p>Golden fried balls stuffed with creamy corn and cheese filling.</p>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="jamun shots.jpg" alt="Masala Chai">
+                        <h4>Jamun Shots</h4>
+                        <p>Refreshing sweet and tangy jamun-flavored shots.</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why" data-aos="fade-up">
+        <h2>Why Choose Us</h2>
+        <ul>
+            <li>Unmatched Taste & Quality</li>
+            <li>Reasonable Pricing</li>
+            <li>Hygienic & Modern Technology</li>
+            <li>Strong Brand Identity</li>
+            <li>Customer-Centric Service</li>
+        </ul>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            
+            <!-- Left Side: Contact Form -->
+            <div class="contact-form">
+                <p>📍 Maharashtra | Goa | Karnataka</p>
+                <p>📞 Girish Kulkarni - +91 94231 36853</p>
+                <p>📞 Abhay Sangoi - +91 98440 81481</p>
+                <p>📞 Rajesh Shah - +91 94030 07650</p>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>            
+    
+            <!-- Right Side: Map -->
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18..."
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
