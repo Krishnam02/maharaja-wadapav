@@ -55,7 +55,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url(WhatsApp\ Image\ 2025-08-13\ at\ 20.17.18_f0888c9a.jpg) no-repeat center center/cover;
+    background: url(hero-bg.jpg) no-repeat center center/cover;
     height: 90vh;
     position: relative;
     display: flex;
@@ -311,24 +311,62 @@ h2 {
 }
 
 
-/* Mobile */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr;
+
+    /* Navbar: stack items vertically */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
     }
-}
 
-@media(max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr;
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
     }
-}
 
+    .navbar ul li {
+        margin: 10px 0;
+    }
 
-
-/* Responsive */
-@media(max-width: 768px) {
+    /* Hero text size */
     .hero h1 {
         font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Contact section */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Menu grid: fewer columns */
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .hero {
+        height: 70vh;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
     }
 }
